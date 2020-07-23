@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        .view {
+            width: 500px;
+            overflow: hidden;
+        }
+        .view .content {
+            width: 2500px;
+            
+            /*给轮播图片添加动画*/
+			animation-name: Carousel;
+			animation-duration: 18s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+        }
+        .view .content img{
+            width: 500px;
+            float: left;
+        }
+
+        @keyframes Carousel {
+            0% {
+				margin-left: 500px;
+            }
+            5%{
+                margin-left: 0;
+            }
+            20%{
+                margin-left: 0;
+            }
+            25%{
+                margin-left: -500px;
+            }
+            40%{
+                margin-left: -500px;
+            }
+            45%{
+                margin-left: -1000px;
+            }
+            60%{
+                margin-left: -1000px;
+            }
+            65%{
+                margin-left: -1500px;
+            }
+            80%{
+                margin-left: -1500px;
+            }
+            85%{
+                margin-left: -2000px;
+            }
+            100%{
+                margin-left: -2000px;
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="view">
+        <div class="content">
+            <img src="1.jpeg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpeg" alt="">
+            <!-- <img src="4.jpg" alt=""> -->
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+<script>
+
+</script>
+</html>

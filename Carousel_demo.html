@@ -58,6 +58,19 @@
                 margin-left: -2000px;
             }    
         }
+
+        /* js实现图片轮播 */
+        .view_js {
+            width: 500px;
+            overflow: hidden;
+        }
+        .view_js .content_js {
+            width: 3000px;
+        }
+        .view_js .content_js img{
+            width: 500px;
+            float: left;
+        }
     </style>
 </head>
 <body>
@@ -71,9 +84,27 @@
             <img src="6.jpg" alt="">
         </div>
     </div>
+
+    <div class="view_js" id="view">
+        <div class="content_js" id="content">
+            <img src="1.jpeg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpeg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+        </div>
+    </div>
 </body>
 
 <script>
-
+    let marginLeft = 0;
+    setInterval(() => {
+        if(marginLeft === -3000){
+            marginLeft = 0;
+        }
+        document.getElementById('content').style.marginLeft = marginLeft+'px';
+        marginLeft -= 500;
+    },2000)
 </script>
 </html>
